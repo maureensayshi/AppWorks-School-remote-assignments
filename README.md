@@ -1,2 +1,2 @@
-# -remote-assignments
+# remote-assignments
 for Appworks School
