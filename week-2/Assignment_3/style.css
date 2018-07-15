@@ -65,14 +65,15 @@ img {
 .name,
 .main-nav,
 .main-nav li,
-.main-nav-replacer {
+.main_nav_replacer {
 	text-align: center;
 	margin-top: 6px;
 	margin-bottom: 6px;
 	display: inline-block;
 }
 
-.main-nav-replacer {
+.main_nav_replacer {
+	z-index: 3;
 	width: 40px;
 	margin-top: 10px;
 	margin-right: 20px;
@@ -92,6 +93,30 @@ img {
 .main-nav a {
 	padding: 10px 15px;
 	display: block;
+}
+
+.Menu{
+  z-index: 2;
+  display: none;
+  list-style-type: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 0%;
+  padding: 0%;
+  width: 20%;
+  height: 100%;
+  background-color: white;
+}
+
+.Menu > li{
+  position: relative;
+  top: 0px;
+  left: 0px;
+  margin: 3px;
+  padding: 2px;
+  width: 60px;
+  height: 20px;
 }
 
 /* ---- Layout Containers ---- */
@@ -169,7 +194,12 @@ img {
 		position: absolute;
 	}
 
-	.main-nav-replacer {
+	.main_nav_replacer {
+		display: none;
+	}
+
+	.Menu,
+	.Menu.li {
 		display: none;
 	}
 
@@ -208,7 +238,12 @@ img {
 		position: absolute;
 	}
 
-	.main-nav-replacer {
+	.main_nav_replacer {
+		display: none;
+	}
+
+	.Menu,
+	.Menu.li {
 		display: none;
 	}
 
