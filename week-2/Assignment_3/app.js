@@ -20,8 +20,10 @@ bottom.addEventListener('click', ()=> {
 image.addEventListener('click', ()=> {
   if(Menu.style.display == "" || Menu.style.display == "none"){
     Menu.style.display = "block";
+    image.src = "./img/x.png";
   } else {
     Menu.style.display = "none";
+    image.src = "./img/menu.png";
   }
 });
 
