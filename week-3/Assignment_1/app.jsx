@@ -44,24 +44,29 @@ function Container(props) {
   );
 }
 
+function List_item(props) {
+  return (
+    <ul className={props.listClass}>
+      for(var i = 0; i < {props.time} ; i++){
+        <li><a href="#">item{i + 1}</a></li>
+      }
+    </ul>
+  );
+}
+
+List_item.propTypes = {
+  time : React.PropTypes.number.isRequired,
+  listClass : React.PropTypes.string.isRequired,
+};
+
 function Application(props) {
   return (
     <div>
       <header className="main-header">
         <h1 className="name"><a href="#">web title</a></h1>
-        <ul className="main-nav">
-          <li><a href="#">item1</a></li>
-          <li><a href="#">item2</a></li>
-          <li><a href="#">item3</a></li>
-          <li><a href="#">item4</a></li>
-        </ul>
+        <List_item listClass="main-nav" time={6} />
         <img id="image" className="main_nav_replacer" src="img/menu.png"/>
-        <ul className="Menu">
-          <li><a href="#">item1</a></li>
-          <li><a href="#">item2</a></li>
-          <li><a href="#">item3</a></li>
-          <li><a href="#">item4</a></li>
-        </ul>
+        <List_item listClass="Menu" time={6} />
       </header>
       <div className="slogan">
         <h1 id="change">Welcome Message</h1>
