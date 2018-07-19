@@ -26,11 +26,11 @@ function Container(props) {
         <Column boxcss="two col" boxtitle="content box 2" boxcontent="content box 1content box 1content box 1content box 1" />
         <Column boxcss="three col" boxtitle="content box 3" boxcontent="content box 1content box 1content box 1content box 1" />
         <Column boxcss="four col" boxtitle="content box 4" boxcontent="content box 1content box 1content box 1content box 1" />
-      </div> //.container
+      </div>
 
       <div className="bottom">
             Call-to-Action
-      </div> //.bottom
+      </div>
 
       <div className="hidden">
         <div className="container">
@@ -43,10 +43,6 @@ function Container(props) {
     </div>
   );
 }
-//
-// Container.propTypes = {
-//
-// };
 
 function Application(props) {
   return (
