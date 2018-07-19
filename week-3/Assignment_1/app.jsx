@@ -28,24 +28,22 @@ function Container(props) {
     </div> //.container
 
     <div className="bottom">
-    </div>
-    <div className="bottom">
           Call-to-Action
     </div> //.bottom
+
     <div className="hidden">
       <div className="container">
         <Column boxcss="one col" boxtitle="content box 1" boxcontent="content box 1content box 1content box 1content box 1" />
         <Column boxcss="two col" boxtitle="content box 2" boxcontent="content box 1content box 1content box 1content box 1" />
         <Column boxcss="three col" boxtitle="content box 3" boxcontent="content box 1content box 1content box 1content box 1" />
         <Column boxcss="four col" boxtitle="content box 4" boxcontent="content box 1content box 1content box 1content box 1" />
-     </div>//<!--/.container-->
-    </div>//<!--/.hidden--
+      </div>
+    </div>
   );
 }
 
 Container.propTypes = {
-  name: React.PropTypes.string.isRequired,
-  score: React.PropTypes.num.isRequired,
+
 };
 
 function Application(props) {
@@ -76,8 +74,7 @@ function Application(props) {
 }
 
 Application.propTypes = {
-  name: React.PropTypes.string.isRequired,
-  score: React.PropTypes.num.isRequired,
+
 };
 
 ReactDOM.render(<Application />, document.getElementById('webpage'));
