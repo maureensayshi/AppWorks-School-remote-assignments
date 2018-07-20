@@ -69,7 +69,7 @@ function Application(props) {
         <List_item listClass="Menu" />
       </header>
       <div className="slogan">
-        <h1 id="change">Welcome Message</h1>
+        <h1 id="change" onClick={() => alert('Have a good time')}>Welcome Message</h1>
       </div>
       <Container />
     </div>
