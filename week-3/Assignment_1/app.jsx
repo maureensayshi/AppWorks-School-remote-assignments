@@ -13,6 +13,30 @@ List_item.propTypes = {
   listClass : React.PropTypes.string.isRequired,
 };
 
+class Toggle extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {isToggleOn: true};
+
+    // This binding is necessary to make `this` work in the callback
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState(prevState => ({
+      isToggleOn: !prevState.isToggleOn
+    }));
+  }
+
+  render() {
+    return (
+      <h1 onClick={this.handleClick}>
+        {this.state.isToggleOn ? 'Welcome' : 'Have a good time'}
+      </h1>
+    );
+  }
+}
+
 function Column(props){
   return (
     <div className={props.boxcss}>
@@ -69,7 +93,7 @@ function Application(props) {
         <List_item listClass="Menu" />
       </header>
       <div className="slogan">
-        <h1 className="change" onClick={() => change.textContent('Have a good time')}>Welcome Message</h1>
+        <Toggle />
       </div>
       <Container />
     </div>
