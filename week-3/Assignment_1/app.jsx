@@ -17,20 +17,18 @@ class Toggle extends React.Component {
   constructor(props) {
     super(props);
     this.state = {isToggleOn: true};
-
-    // This binding is necessary to make `this` work in the callback
-    this.handleClick = this.handleClick.bind(this);
+    this.handleClickOnTitle = this.handleClickOnTitle.bind(this);
   }
 
-  handleClick() {
-    this.setState(prevState => ({
-      isToggleOn: !prevState.isToggleOn
-    }));
+  handleClickOnTitle() {
+    this.setState({
+      isToggleOn: !this.state.isToggleOn
+    });
   }
 
   render() {
     return (
-      <h1 onClick={this.handleClick}>
+      <h1 onClick={this.handleClickOnTitle}>
         {this.state.isToggleOn ? 'Welcome' : 'Have a good time'}
       </h1>
     );
@@ -52,6 +50,37 @@ Column.propTypes = {
   boxcontent: React.PropTypes.string.isRequired,
 };
 
+class CallToAction extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {isToggleOn: true};
+    this.handleClickOnBox = this.handleClickOnBox.bind(this);
+  }
+
+  handleClickOnBox() {
+    this.setState({
+      isToggleOn: !this.state.isToggleOn
+    });
+  }
+
+  render() {
+    const style = this.state.isToggleOn ? {display: 'none'} : {display: 'block'};
+
+    return (
+      <div className="bottom" onClick={this.handleClickOnBox}>
+            Call-to-Action
+      </div>
+
+      <div className="container" style={style}>
+        <Column boxcss="one col" boxtitle="content box 1" boxcontent="content box 1content box 1content box 1content box 1" />
+        <Column boxcss="two col" boxtitle="content box 2" boxcontent="content box 1content box 1content box 1content box 1" />
+        <Column boxcss="three col" boxtitle="content box 3" boxcontent="content box 1content box 1content box 1content box 1" />
+        <Column boxcss="four col" boxtitle="content box 4" boxcontent="content box 1content box 1content box 1content box 1" />
+      </div>
+    );
+  }
+}
+
 function Container(props) {
   return (
     <div>
@@ -66,19 +95,7 @@ function Container(props) {
         <Column boxcss="three col" boxtitle="content box 3" boxcontent="content box 1content box 1content box 1content box 1" />
         <Column boxcss="four col" boxtitle="content box 4" boxcontent="content box 1content box 1content box 1content box 1" />
       </div>
-
-      <div className="bottom">
-            Call-to-Action
-      </div>
-
-      <div className="hidden">
-        <div className="container">
-          <Column boxcss="one col" boxtitle="content box 1" boxcontent="content box 1content box 1content box 1content box 1" />
-          <Column boxcss="two col" boxtitle="content box 2" boxcontent="content box 1content box 1content box 1content box 1" />
-          <Column boxcss="three col" boxtitle="content box 3" boxcontent="content box 1content box 1content box 1content box 1" />
-          <Column boxcss="four col" boxtitle="content box 4" boxcontent="content box 1content box 1content box 1content box 1" />
-        </div>
-      </div>
+      <CallToAction />
     </div>
   );
 }
