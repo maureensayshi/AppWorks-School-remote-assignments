@@ -104,14 +104,14 @@ img {
   right: 0;
   margin: 0%;
   padding: 0%;
-  width: 35%;
+  width: 40%;
   height: 100%;
   background-color: white;
 }
 
 .Menu > li{
   position: relative;
-  top: 10%;
+  top: 35px;
   left: 0px;
   margin: 3px;
   padding: 2px;
