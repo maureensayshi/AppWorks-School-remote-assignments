@@ -13,6 +13,37 @@ List_item.propTypes = {
   listClass : React.PropTypes.string.isRequired,
 };
 
+class CallForMenu extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {isToggleOn: true};
+    this.handleClickOnMenu = this.handleClickOnMenu.bind(this);
+  }
+
+  handleClickOnMenu() {
+    this.setState({
+      isToggleOn: !this.state.isToggleOn
+    });
+  }
+
+  render() {
+    const src = this.state.isToggleOn ? "img/menu.png" : "img/x.png";
+    const style = this.state.isToggleOn ? {display: 'none'} : {display: 'block'};
+
+    return (
+      <div>
+        <img id="image" className="main_nav_replacer" src={src} onClick={this.handleClickOnMenu}>
+        <ul className="Menu" style={style}>
+          <li><a href="#">item1</a></li>
+          <li><a href="#">item2</a></li>
+          <li><a href="#">item3</a></li>
+          <li><a href="#">item4</a></li>
+        </ul>
+      </div>
+    );
+  }
+}
+
 class Toggle extends React.Component {
   constructor(props) {
     super(props);
@@ -108,8 +139,7 @@ function Application(props) {
       <header className="main-header">
         <h1 className="name"><a href="#">web title</a></h1>
         <List_item listClass="main-nav" />
-        <img id="image" className="main_nav_replacer" src="img/menu.png"/>
-        <List_item listClass="Menu" />
+        <CallForMenu />
       </header>
       <div className="slogan">
         <Toggle />
