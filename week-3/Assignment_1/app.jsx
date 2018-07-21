@@ -1,6 +1,6 @@
 function List_item(props) {
   return (
-    <ul className={props.listClass} style={style}>
+    <ul className={props.listClass} >
       <li><a href="#">item1</a></li>
       <li><a href="#">item2</a></li>
       <li><a href="#">item3</a></li>
@@ -33,7 +33,7 @@ class CallForMenu extends React.Component {
     return (
       <div>
         <img id="image" className="main_nav_replacer" src={src} onClick={this.handleClickOnMenu} />
-        <List_item listClass="Menu" />
+        <List_item listClass="Menu" style={style}/>
       </div>
     );
   }
