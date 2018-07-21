@@ -32,7 +32,7 @@ class CallForMenu extends React.Component {
 
     return (
       <div>
-        <img id="image" className="main_nav_replacer" src={src} onClick={this.handleClickOnMenu}>
+        <img id="image" className="main_nav_replacer" src={src} onClick={this.handleClickOnMenu} />
         <ul className="Menu" style={style}>
           <li><a href="#">item1</a></li>
           <li><a href="#">item2</a></li>
