@@ -67,15 +67,17 @@ class CallToAction extends React.Component {
     const style = this.state.isToggleOn ? {display: 'none'} : {display: 'block'};
 
     return (
-      <div className="bottom" onClick={this.handleClickOnBox}>
-            Call-to-Action
-      </div>
+      <div>
+        <div className="bottom" onClick={this.handleClickOnBox}>
+              Call-to-Action
+        </div>
 
-      <div className="container" style={style}>
-        <Column boxcss="one col" boxtitle="content box 1" boxcontent="content box 1content box 1content box 1content box 1" />
-        <Column boxcss="two col" boxtitle="content box 2" boxcontent="content box 1content box 1content box 1content box 1" />
-        <Column boxcss="three col" boxtitle="content box 3" boxcontent="content box 1content box 1content box 1content box 1" />
-        <Column boxcss="four col" boxtitle="content box 4" boxcontent="content box 1content box 1content box 1content box 1" />
+        <div className="container" style={style}>
+          <Column boxcss="one col" boxtitle="content box 1" boxcontent="content box 1content box 1content box 1content box 1" />
+          <Column boxcss="two col" boxtitle="content box 2" boxcontent="content box 1content box 1content box 1content box 1" />
+          <Column boxcss="three col" boxtitle="content box 3" boxcontent="content box 1content box 1content box 1content box 1" />
+          <Column boxcss="four col" boxtitle="content box 4" boxcontent="content box 1content box 1content box 1content box 1" />
+        </div>
       </div>
     );
   }
