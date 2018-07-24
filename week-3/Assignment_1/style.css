@@ -75,7 +75,8 @@ img {
 .main_nav_replacer {
 	z-index: 3;
 	width: 40px;
-	margin-top: -50px;
+	top: 0px;
+	/* margin-top: -50px; */
 	margin-right: 20px;
 	right: 0px;
 	position: absolute;
