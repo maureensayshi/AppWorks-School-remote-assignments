@@ -1,8 +1,14 @@
 var express = require('express');
 var app = express();
 
+app.set('view engine', 'pug');
+
 app.get('/', function (req, res) {
-  res.send('Hello My Server!')
+  res.render('index')
+});
+
+app.get('/getData', function (req, res) {
+  res.send('<h2>Wrong Parameters</h2>')
 });
 
 app.listen(3000, function () {
