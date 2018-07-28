@@ -1,0 +1,22 @@
+body{
+	background-color: #E5E5E5;
+	text-align: center;
+}
+
+.box{
+	text-align: center;
+	background-color: #EC9A80;
+	margin: 5% 20%;
+	padding: 5%;
+	font-size: 20px;
+}
+
+#reply{
+	padding: 5%;
+}
+
+#enter{
+	background-color: #E4CDC8;
+	font-size: 15px;
+}
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="box">
+	<h1>Count number</h1>
+
+	<p>please enter a number, and it will count the value of "1+2+...+number"</p>
+
+	<div id="client">
+		<label>enter the number:</label>
+        	<input id="input" type="text" required>
+	</div>
+
+	<div id="reply"></div>
+
+	<script>
+	function count() {
+		var enternumber = document.getElementById("input").value;
+  		var xhr = new XMLHttpRequest();
+
+  		xhr.open("GET", '/getData?number=' + enternumber, true);
+  
+  		xhr.responseType = 'text';
+
+  		xhr.onreadystatechange = function() {
+    			if (this.readyState == 4 && this.status == 200) {
+    				document.getElementById("reply").innerHTML = "The value is " + this.responseText;
+    			}
+  		};
+
+  		xhr.send();
+	}
+	</script>
+
+	<button id="enter" type="button" onclick="count()">enter</button>
+	</div>
+</body>
+</html>
+
