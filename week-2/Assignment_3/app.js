@@ -26,25 +26,3 @@ image.addEventListener('click', ()=> {
     image.src = "./img/menu.png";
   }
 });
-
-
-/* const callfor = document.getElementById('callfor');
-const hidden = document.getElementById('hidden');
-
-callfor.addEventListener('click', () => {
-    hidden();
-});
-
-function hidden(){
-
-if(hidden.style.display == "none"){
-
-hidden.style.display = "block";
-} else {
-
-hidden.style.display == "none";
-};
-}
-
-
-  // change.textContent = "Noooop"; */
