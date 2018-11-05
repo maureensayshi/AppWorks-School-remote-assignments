@@ -11,4 +11,4 @@
 
 [Week 3 Practice](https://maureensayshi.github.io/AppWorks-School-remote-assignments/week-3/Assignment_1/#)
 
-* **Week 4:** Ajax Practice
+* **Week 4:** Building RESTful APIs with Node and Express.
